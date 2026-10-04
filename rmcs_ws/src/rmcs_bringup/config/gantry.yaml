@@ -1,0 +1,27 @@
+rmcs_executor:
+  ros__parameters:
+    update_rate: 1000.0
+    components:
+      - rmcs_core::hardware::Gantry -> gantry_hardware
+
+gantry_hardware:
+  ros__parameters:
+    board_serial: ""
+
+    # pitch 速度环PID
+    pitch_kp: 0.04
+    pitch_ki: 0.0
+    pitch_kd: 0.0
+    pitch_output_min: -0.15
+    pitch_output_max: 0.15
+
+    # yaw 速度环PID
+    yaw_kp: 0.04
+    yaw_ki: 0.0
+    yaw_kd: 0.0
+    yaw_output_min: -0.15
+    yaw_output_max: 0.15
+
+    # 摇杆参数
+    deadzone: 0.1
+    max_speed: 30.0
