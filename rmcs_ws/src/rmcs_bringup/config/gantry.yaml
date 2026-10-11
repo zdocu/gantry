@@ -8,20 +8,52 @@ gantry_hardware:
   ros__parameters:
     board_serial: ""
 
-    # pitch 速度环PID
-    pitch_kp: 0.04
-    pitch_ki: 0.0
-    pitch_kd: 0.0
-    pitch_output_min: -0.15
-    pitch_output_max: 0.15
+    pitch_angle_kp: 4.0
+    pitch_angle_ki: 0.3
+    pitch_angle_kd: 0.05
+    pitch_angle_integral_min: -1.0
+    pitch_angle_integral_max: 1.0
+    pitch_angle_output_min: -8.0
+    pitch_angle_output_max: 8.0
 
-    # yaw 速度环PID
-    yaw_kp: 0.04
+    pitch_speed_kp: 0.008
+    pitch_speed_ki: 0.0
+    pitch_speed_kd: 0.0
+    pitch_speed_integral_min: -5.0
+    pitch_speed_integral_max: 5.0
+    pitch_speed_output_min: -0.15
+    pitch_speed_output_max: 0.15
+
+    pitch_sync_kp: 1.0
+    pitch_sync_ki: 0.5
+    pitch_sync_kd: 0.0
+    pitch_sync_integral_min: -1.0
+    pitch_sync_integral_max: 1.0
+    pitch_sync_output_min: -8.0
+    pitch_sync_output_max: 8.0
+
+    yaw_angle_kp: 4.0
+    yaw_angle_ki: 0.3
+    yaw_angle_kd: 0.05
+    yaw_angle_integral_min: -1.0
+    yaw_angle_integral_max: 1.0
+    yaw_angle_output_min: -8.0
+    yaw_angle_output_max: 8.0
+
+    yaw_kp: 0.08
     yaw_ki: 0.0
     yaw_kd: 0.0
+    yaw_integral_min: -5.0
+    yaw_integral_max: 5.0
     yaw_output_min: -0.15
     yaw_output_max: 0.15
 
-    # 摇杆参数
     deadzone: 0.1
-    max_speed: 30.0
+    
+    max_speed: 8.0
+    
+    max_acceleration: 80.0
+    
+    max_angle_error: 0.6
+    
+    sync_error_limit: 0.05
